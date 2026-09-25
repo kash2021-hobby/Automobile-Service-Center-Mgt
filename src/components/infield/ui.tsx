@@ -113,20 +113,21 @@ export function TabletFrame({ children, className = "" }: { children: ReactNode;
   );
 }
 
-export function Logo({ tone = "light" }: { tone?: "light" | "dark" }) {
+import logoImg from "@/assets/logo.png";
+
+export function Logo({
+  tone = "light",
+  className = "h-11 sm:h-12 w-auto",
+}: {
+  tone?: "light" | "dark";
+  className?: string;
+}) {
   return (
-    <span className="flex items-center gap-2">
-      <span className="grid h-9 w-9 shrink-0 place-items-center rounded-md bg-brand font-display text-lg font-extrabold text-white">
-        iF7
-      </span>
-      <span
-        className={`font-display text-2xl leading-none font-extrabold tracking-wide uppercase ${
-          tone === "light" ? "text-white" : "text-foreground"
-        }`}
-      >
-        Infield<span className="text-brand">7</span>
-      </span>
-    </span>
+    <img
+      src={logoImg}
+      alt="INFIELD 7 Logo"
+      className={`object-contain rounded-lg transition-transform hover:scale-105 ${className}`}
+    />
   );
 }
 

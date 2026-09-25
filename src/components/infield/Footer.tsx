@@ -39,8 +39,8 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-4 lg:px-8">
         <div className="grid gap-6 lg:grid-cols-4 lg:gap-10">
           <div>
-            <span className="inline-flex rounded-lg bg-white px-3 py-2">
-              <Logo tone="dark" />
+            <span className="inline-flex rounded-xl bg-white p-2 shadow-md">
+              <Logo tone="dark" className="h-14 w-auto" />
             </span>
             <p className="mt-4 text-sm text-white/60">
               The service center management app for automobile workshops in India.

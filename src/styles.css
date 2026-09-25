@@ -19,6 +19,20 @@
  */
 
 @theme inline {
+  --font-display: "Barlow Condensed", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-surface: var(--surface);
+  --color-brand: var(--brand);
+  --color-brand-hover: var(--brand-hover);
+  --color-alert: var(--alert);
+  --color-status-green: var(--status-green);
+  --color-status-amber: var(--status-amber);
+  --color-status-blue: var(--status-blue);
+  --color-status-red: var(--status-red);
+  --color-status-grey: var(--status-grey);
+  --color-whatsapp: var(--whatsapp);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -62,7 +76,19 @@
 }
 
 :root {
-  --radius: 0.625rem;
+  --radius: 0.5rem;
+  --ink: oklch(0.1767 0.0114 260.64);
+  --ink-2: oklch(0.2168 0.0151 261.62);
+  --surface: oklch(0.97 0.0029 264.54);
+  --brand: oklch(0.5267 0.2127 265.23);
+  --brand-hover: oklch(0.4581 0.2048 265.23);
+  --alert: oklch(0.6083 0.209 27.03);
+  --status-green: oklch(0.7227 0.192 149.58);
+  --status-amber: oklch(0.7686 0.1647 70.08);
+  --status-blue: oklch(0.6231 0.188 259.81);
+  --status-red: oklch(0.6368 0.2078 25.33);
+  --status-grey: oklch(0.7137 0.0192 261.32);
+  --whatsapp: oklch(0.761 0.2015 149.74);
   --background: oklch(1 0 0);
   --foreground: oklch(0.129 0.042 264.695);
   --card: oklch(1 0 0);
@@ -137,8 +163,77 @@
     border-color: var(--color-border);
   }
 
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  .font-display {
+    font-family: var(--font-display);
+  }
+}
+
+@utility eyebrow {
+  font-family: var(--font-display);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.8125rem;
+}
+
+@utility btn-base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: var(--radius);
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 1rem;
+  padding: 0.875rem 1.5rem;
+  min-height: 48px;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+@utility btn-brand {
+  background-color: var(--brand);
+  color: white;
+  &:hover {
+    background-color: var(--brand-hover);
+  }
+}
+
+@utility btn-ghost {
+  border: 1px solid color-mix(in oklab, white 50%, transparent);
+  color: white;
+  &:hover {
+    background-color: color-mix(in oklab, white 12%, transparent);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+  html {
+    scroll-behavior: auto;
   }
 }

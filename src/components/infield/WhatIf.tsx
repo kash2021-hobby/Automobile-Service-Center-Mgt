@@ -1,6 +1,5 @@
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import { useInView } from "framer-motion";
 import { ArrowRight, Check, X } from "lucide-react";
 import { Eyebrow, Reveal } from "./ui";
 
@@ -15,14 +14,16 @@ const ROWS = [
 export default function WhatIf() {
   const [withInField, setWithInField] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, amount: 0.4 });
-  const played = useRef(false);
+  const inView = useInView(ref, { once: true, amount: 0.25 });
+  const hasAutoPlayed = useRef(false);
 
   useEffect(() => {
-    if (!inView || played.current) return;
-    played.current = true;
-    const t = setTimeout(() => setWithInField(true), 900);
-    return () => clearTimeout(t);
+    if (!inView || hasAutoPlayed.current) return;
+    hasAutoPlayed.current = true;
+    const timer = setTimeout(() => {
+      setWithInField(true);
+    }, 800);
+    return () => clearTimeout(timer);
   }, [inView]);
 
   return (
@@ -40,56 +41,58 @@ export default function WhatIf() {
           </p>
         </Reveal>
 
+        {/* Toggle Controls */}
         <Reveal className="mt-10">
-          <div className="mx-auto flex w-full max-w-md items-center gap-2 rounded-lg border border-white/15 bg-ink-2 p-1.5">
+          <div className="mx-auto flex w-full max-w-md items-center gap-2 rounded-xl border border-white/15 bg-ink-2 p-1.5 shadow-lg">
             <button
               type="button"
               onClick={() => setWithInField(false)}
-              className={`min-h-11 flex-1 rounded-md px-3 py-2 font-display text-sm font-bold tracking-wide uppercase transition-colors ${
-                withInField ? "text-white/60" : "bg-alert text-white"
+              className={`min-h-11 flex-1 rounded-lg px-3 py-2 font-display text-sm font-bold tracking-wide uppercase transition-all duration-300 ${
+                withInField ? "text-white/60 hover:text-white" : "bg-alert text-white shadow"
               }`}
             >
-              Without InField
+              Without Infield7
             </button>
             <button
               type="button"
               onClick={() => setWithInField(true)}
-              className={`min-h-11 flex-1 rounded-md px-3 py-2 font-display text-sm font-bold tracking-wide uppercase transition-colors ${
-                withInField ? "bg-brand text-white" : "text-white/60"
+              className={`min-h-11 flex-1 rounded-lg px-3 py-2 font-display text-sm font-bold tracking-wide uppercase transition-all duration-300 ${
+                withInField ? "bg-brand text-white shadow" : "text-white/60 hover:text-white"
               }`}
             >
-              With InField
+              With Infield7
             </button>
           </div>
         </Reveal>
 
+        {/* Animated Feature Rows */}
         <div className="mt-8 space-y-3">
           {ROWS.map(([before, after], i) => (
             <div
               key={before}
-              className="overflow-hidden rounded-lg border border-white/10 bg-ink-2"
+              className="overflow-hidden rounded-xl border border-white/10 bg-ink-2 transition-colors duration-300"
             >
               <AnimatePresence mode="wait" initial={false}>
                 <motion.div
                   key={withInField ? "after" : "before"}
-                  initial={{ opacity: 0, y: 14 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -14 }}
-                  transition={{ duration: 0.35, delay: i * 0.05 }}
-                  className="flex min-w-0 items-center gap-3 p-4"
+                  initial={{ opacity: 0, y: 12, rotateX: -15 }}
+                  animate={{ opacity: 1, y: 0, rotateX: 0 }}
+                  exit={{ opacity: 0, y: -12, rotateX: 15 }}
+                  transition={{ duration: 0.3, delay: i * 0.04 }}
+                  className="flex min-w-0 items-center gap-3.5 p-4"
                 >
                   <span
-                    className={`grid h-8 w-8 shrink-0 place-items-center rounded-full ${
-                      withInField ? "bg-status-green/20" : "bg-alert/20"
+                    className={`grid h-8 w-8 shrink-0 place-items-center rounded-full transition-colors duration-300 ${
+                      withInField ? "bg-status-green/20 text-status-green" : "bg-alert/20 text-alert"
                     }`}
                   >
                     {withInField ? (
-                      <Check className="h-4 w-4 text-status-green" />
+                      <Check className="h-4 w-4 stroke-[3]" />
                     ) : (
-                      <X className="h-4 w-4 text-alert" />
+                      <X className="h-4 w-4 stroke-[3]" />
                     )}
                   </span>
-                  <p className="min-w-0 text-sm leading-snug text-white/90 sm:text-base">
+                  <p className="min-w-0 text-sm font-medium leading-snug text-white/95 sm:text-base">
                     {withInField ? after : before}
                   </p>
                 </motion.div>
@@ -99,8 +102,8 @@ export default function WhatIf() {
         </div>
 
         <Reveal className="mt-10 text-center">
-          <a href="#how-it-works" className="btn-base btn-brand w-full sm:w-auto">
-            Show Me How <ArrowRight className="h-4 w-4" />
+          <a href="#contact" className="btn-base btn-brand w-full sm:w-auto">
+            Book a Free Demo <ArrowRight className="h-4 w-4" />
           </a>
         </Reveal>
       </div>

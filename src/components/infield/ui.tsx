@@ -95,9 +95,9 @@ export function CountUp({ to, prefix = "", suffix = "" }: { to: number; prefix?:
 export function PhoneFrame({ children, className = "" }: { children: ReactNode; className?: string }) {
   return (
     <div
-      className={`relative w-full max-w-[300px] rounded-[2.25rem] border border-white/15 bg-ink p-2.5 shadow-2xl ${className}`}
+      className={`relative w-full max-w-[340px] sm:max-w-[420px] rounded-[2.25rem] border border-white/15 bg-ink p-3 shadow-2xl ${className}`}
     >
-      <div className="absolute top-2.5 left-1/2 z-10 h-5 w-24 -translate-x-1/2 rounded-b-2xl bg-ink" />
+      <div className="absolute top-3 left-1/2 z-10 h-5 w-28 -translate-x-1/2 rounded-b-2xl bg-ink" />
       <div className="overflow-hidden rounded-[1.75rem] bg-surface">{children}</div>
     </div>
   );
@@ -117,14 +117,14 @@ export function Logo({ tone = "light" }: { tone?: "light" | "dark" }) {
   return (
     <span className="flex items-center gap-2">
       <span className="grid h-9 w-9 shrink-0 place-items-center rounded-md bg-brand font-display text-lg font-extrabold text-white">
-        iF
+        iF7
       </span>
       <span
         className={`font-display text-2xl leading-none font-extrabold tracking-wide uppercase ${
           tone === "light" ? "text-white" : "text-foreground"
         }`}
       >
-        In<span className="text-brand">Field</span>
+        Infield<span className="text-brand">7</span>
       </span>
     </span>
   );

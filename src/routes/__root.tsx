@@ -77,18 +77,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "InField — Service Center Management App" },
+      { title: "Infield7 — Service Center Management App" },
       {
         name: "description",
         content:
-          "InField is a service center management app for automobile workshops in India.",
+          "Infield7 is a service center management app for automobile workshops in India.",
       },
-      { name: "author", content: "InField" },
-      { property: "og:title", content: "InField — Service Center Management App" },
+      { name: "author", content: "Infield7" },
+      { property: "og:title", content: "Infield7 — Service Center Management App" },
       {
         property: "og:description",
         content:
-          "InField is a service center management app for automobile workshops in India.",
+          "Infield7 is a service center management app for automobile workshops in India.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

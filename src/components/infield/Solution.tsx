@@ -22,7 +22,7 @@ const FLOATING = [
   { label: "Vehicle", value: "DL-08-XY-9876" },
   { label: "Service", value: "Full Service + AC" },
   { label: "Mechanic", value: "Suresh (Engine Specialist)" },
-  { label: "Progress", value: "72%" },
+  { label: "Expected Delivery", value: "5:30 PM Today" },
 ];
 
 const STEPS = [
@@ -44,7 +44,7 @@ export default function Solution() {
         <Reveal className="text-center">
           <Eyebrow>The Solution</Eyebrow>
           <h2 className="mt-3 text-[clamp(1.75rem,5.5vw,3rem)] leading-tight font-bold uppercase">
-            Meet InField. Your Entire Service Center
+            Meet Infield7. Your Entire Service Center
             <span className="block text-brand">In One App.</span>
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base text-muted-foreground">
@@ -134,19 +134,19 @@ export default function Solution() {
         <div className="mt-20">
           <SectionTitle>How It Works</SectionTitle>
           <div className="relative mt-10">
-            <span className="absolute top-8 right-0 left-0 hidden h-px bg-black/10 lg:block" />
-            <ol className="relative grid gap-6 lg:grid-cols-5">
+            <span className="absolute top-9 right-0 left-0 hidden h-px bg-black/10 lg:block" />
+            <ol className="relative grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
               {STEPS.map((s, i) => (
                 <Reveal key={s.title} delay={i * 0.08}>
                   <li className="flex gap-4 lg:flex-col lg:items-center lg:text-center">
-                    <span className="grid h-16 w-16 shrink-0 place-items-center rounded-full border border-black/10 bg-white shadow-sm">
-                      <s.icon className="h-7 w-7 text-brand" strokeWidth={1.4} />
+                    <span className="grid h-16 w-16 shrink-0 place-items-center rounded-2xl border border-black/10 bg-white shadow-md">
+                      <s.icon className="h-10 w-10 text-brand" strokeWidth={1.5} />
                     </span>
                     <div className="min-w-0">
-                      <p className="font-display text-sm font-bold tracking-widest text-brand uppercase">
+                      <p className="font-display text-xs font-extrabold tracking-widest text-brand uppercase">
                         Step {i + 1}
                       </p>
-                      <h3 className="font-display text-xl font-bold uppercase">{s.title}</h3>
+                      <h3 className="font-display text-base font-bold uppercase text-ink">{s.title}</h3>
                       <p className="mt-1 text-sm text-muted-foreground">{s.text}</p>
                     </div>
                   </li>

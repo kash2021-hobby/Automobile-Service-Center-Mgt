@@ -4,7 +4,7 @@ import ctaImg from "@/assets/cta-car.jpg";
 import { supabase } from "@/integrations/supabase/client";
 import { WHATSAPP_NUMBER } from "./ui";
 
-const GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycbyel1WeHyu2g_WcBfcvzeaLrGBkCdctDpKOVjEVPMbB6A2myz7IpiLjmMDrbZKFadrAzA/exec";
+const GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycbw3e0x9-xUMilwkpWGhTltJ6b0vtsG7sG9TBipifuymLKd5z91Pbq5M369-LLBFSZ3o/exec";
 
 export default function Contact() {
   const [formData, setFormData] = useState({

@@ -29,7 +29,7 @@ import {
 
 /* ── Google Sheets Web App URL ───────────────────────────────────── */
 // Replace this with your deployed Google Apps Script Web App URL
-const GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycbyel1WeHyu2g_WcBfcvzeaLrGBkCdctDpKOVjEVPMbB6A2myz7IpiLjmMDrbZKFadrAzA/exec";
+const GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycbw3e0x9-xUMilwkpWGhTltJ6b0vtsG7sG9TBipifuymLKd5z91Pbq5M369-LLBFSZ3o/exec";
 
 /* ── data ────────────────────────────────────────────────────────── */
 

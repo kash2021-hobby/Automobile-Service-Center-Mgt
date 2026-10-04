@@ -112,6 +112,8 @@ export function TabletFrame({ children, className = "" }: { children: ReactNode;
       <div className="overflow-hidden rounded-xl bg-white">{children}</div>
     </div>
   );
+}
+
 export function Logo({
   className = "h-11 sm:h-12 w-auto",
 }: {

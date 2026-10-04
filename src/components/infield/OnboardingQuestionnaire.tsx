@@ -507,7 +507,7 @@ export default function OnboardingQuestionnaire({
                         <Input
                           id="q-phone"
                           type="tel"
-                          placeholder="10-digit number"
+                          placeholder="e.g. +1 555-0199 or +91 9876543210"
                           required
                           className="h-11 rounded-lg border-white/15 bg-white/5 text-white placeholder:text-white/30 focus:border-brand focus:ring-brand/30"
                         />

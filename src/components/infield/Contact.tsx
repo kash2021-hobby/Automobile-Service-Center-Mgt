@@ -24,8 +24,8 @@ export default function Contact() {
   const [waLink, setWaLink] = useState("");
 
   const validatePhone = (phone: string) => {
-    const cleanPhone = phone.replace(/\D/g, "");
-    return /^[6-9]\d{9}$/.test(cleanPhone);
+    const cleanPhone = phone.trim();
+    return cleanPhone.length >= 7 && /^[\d\s+\-()]+$/.test(cleanPhone);
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -41,9 +41,9 @@ export default function Contact() {
       return;
     }
 
-    const cleanPhone = formData.phone.trim().replace(/\D/g, "");
+    const cleanPhone = formData.phone.trim();
     if (!validatePhone(cleanPhone)) {
-      setErrorMsg("Please enter a valid 10-digit Indian phone number starting with 6, 7, 8, or 9.");
+      setErrorMsg("Please enter a valid phone number with your country code.");
       return;
     }
 
@@ -244,22 +244,16 @@ export default function Contact() {
                 <div className="grid gap-4 sm:grid-cols-2">
                   <div>
                     <label className="block text-xs font-semibold text-white/80 uppercase tracking-wider mb-1">
-                      Phone Number (+91) <span className="text-alert">*</span>
+                      Phone Number <span className="text-alert">*</span>
                     </label>
-                    <div className="relative flex">
-                      <span className="inline-flex h-11 items-center rounded-l-lg border border-r-0 border-white/15 bg-black/60 px-3 text-xs font-bold text-white/70">
-                        +91
-                      </span>
-                      <input
-                        type="tel"
-                        required
-                        maxLength={10}
-                        placeholder="9876543210"
-                        value={formData.phone}
-                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        className="w-full h-11 rounded-r-lg border border-white/15 bg-black/40 px-3.5 text-sm text-white placeholder:text-gray-400 focus:border-brand focus:outline-none"
-                      />
-                    </div>
+                    <input
+                      type="tel"
+                      required
+                      placeholder="e.g. +1 555-0199 or +91 9876543210"
+                      value={formData.phone}
+                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                      className="w-full h-11 rounded-lg border border-white/15 bg-black/40 px-3.5 text-sm text-white placeholder:text-gray-400 focus:border-brand focus:outline-none"
+                    />
                   </div>
 
                   <div>

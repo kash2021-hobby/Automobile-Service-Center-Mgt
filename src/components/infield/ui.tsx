@@ -1,5 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useEffect, useRef, useState, type ReactNode } from "react";
+import logoImg from "@/assets/logo.png";
 
 export function Reveal({
   children,
@@ -111,8 +112,6 @@ export function TabletFrame({ children, className = "" }: { children: ReactNode;
       <div className="overflow-hidden rounded-xl bg-white">{children}</div>
     </div>
   );
-}
-
 export function Logo({
   className = "h-11 sm:h-12 w-auto",
 }: {
@@ -120,9 +119,11 @@ export function Logo({
   className?: string;
 }) {
   return (
-    <span className={`inline-flex items-center whitespace-nowrap px-2 font-display text-2xl font-extrabold text-ink ${className}`}>
-      INFIELD<span className="text-brand">7</span>
-    </span>
+    <img
+      src={logoImg}
+      alt="INFIELD7 Logo"
+      className={`object-contain ${className}`}
+    />
   );
 }
 

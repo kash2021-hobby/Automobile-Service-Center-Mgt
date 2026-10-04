@@ -110,7 +110,6 @@ export default function Contact() {
     } finally {
       setLoading(false);
       setSubmitted(true);
-      window.open(targetWaUrl, "_blank");
     }
   };
 
@@ -171,30 +170,35 @@ export default function Contact() {
           {/* Right Column: Contact Form */}
           <div className="rounded-2xl border border-white/15 bg-ink-2 p-6 shadow-2xl sm:p-8 lg:col-span-7">
             {submitted ? (
-              <div className="py-8 text-center">
+              <div className="py-10 text-center space-y-4">
                 <div className="mx-auto grid h-16 w-16 place-items-center rounded-full bg-status-green/20 text-status-green">
-                  <CheckCircle2 className="h-10 w-10" />
+                  <CheckCircle2 className="h-10 w-10 text-emerald-400" />
                 </div>
-                <h3 className="mt-4 text-2xl font-bold">Appointment & Demo Request Sent!</h3>
-                <p className="mt-2 text-sm text-white/70">
-                  Your lead details have been submitted. We are opening WhatsApp so you can chat with our team immediately.
+                <h3 className="text-2xl sm:text-3xl font-extrabold text-white">Appointment Request Submitted!</h3>
+                <p className="max-w-md mx-auto text-sm text-white/70 leading-relaxed">
+                  Thank you for booking with Infield7. Your details have been recorded successfully. Our team will review your appointment request and contact you shortly.
                 </p>
-                <div className="mt-6">
-                  <a
-                    href={waLink}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="btn-base btn-brand inline-flex items-center gap-2 px-6 py-3.5 text-base font-bold"
+                <div className="pt-4">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setSubmitted(false);
+                      setFormData({
+                        name: "",
+                        serviceCenter: "",
+                        phone: "",
+                        city: "",
+                        location: "",
+                        preferredDate: "",
+                        preferredTime: "",
+                        message: "",
+                      });
+                    }}
+                    className="btn-base btn-brand inline-flex items-center gap-2 px-6 py-3 text-sm font-bold"
                   >
-                    <MessageCircle className="h-5 w-5" /> Open WhatsApp Demo Chat
-                  </a>
+                    Submit Another Request
+                  </button>
                 </div>
-                <p className="mt-4 text-xs text-white/50">
-                  Didn't open WhatsApp?{" "}
-                  <a href={waLink} target="_blank" rel="noreferrer" className="text-brand underline font-semibold">
-                    Click here to open WhatsApp directly
-                  </a>
-                </p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">

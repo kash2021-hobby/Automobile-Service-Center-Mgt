@@ -113,21 +113,16 @@ export function TabletFrame({ children, className = "" }: { children: ReactNode;
   );
 }
 
-import logoImg from "@/assets/logo.png";
-
 export function Logo({
-  tone = "light",
   className = "h-11 sm:h-12 w-auto",
 }: {
   tone?: "light" | "dark";
   className?: string;
 }) {
   return (
-    <img
-      src={logoImg}
-      alt="INFIELD 7 Logo"
-      className={`object-contain rounded-lg transition-transform hover:scale-105 ${className}`}
-    />
+    <span className={`inline-flex items-center whitespace-nowrap px-2 font-display text-2xl font-extrabold text-ink ${className}`}>
+      INFIELD<span className="text-brand">7</span>
+    </span>
   );
 }
 

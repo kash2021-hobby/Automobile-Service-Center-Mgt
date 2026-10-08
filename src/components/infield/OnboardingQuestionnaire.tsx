@@ -199,13 +199,10 @@ export default function OnboardingQuestionnaire({
     <div className="min-h-screen bg-gradient-to-b from-[#0B1120] via-[#0F1729] to-[#0B1120] flex flex-col">
       {/* ── Header ── */}
       <header className="flex justify-between items-center px-4 py-3 sm:px-6 sm:py-4">
-        <div className="flex items-center gap-2.5">
+        <div className="flex items-center gap-3">
           <div className="rounded-xl bg-white p-1.5 shadow-sm">
             <Logo className="h-8 sm:h-10 w-auto" />
           </div>
-          <span className="text-[10px] font-semibold text-white/50 uppercase tracking-wider bg-white/5 border border-white/10 px-2 py-0.5 rounded-md hidden sm:inline-block">
-            Powered by InField7
-          </span>
         </div>
         <button
           type="button"

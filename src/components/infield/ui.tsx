@@ -123,7 +123,7 @@ export function Logo({
   return (
     <img
       src={logoImg}
-      alt="INFIELD7 Logo"
+      alt="MarkPresent Logo"
       className={`object-contain ${className}`}
     />
   );

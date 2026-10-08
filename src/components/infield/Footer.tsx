@@ -95,8 +95,8 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="mailto:hello@infield.app" className="flex items-center gap-2 hover:text-brand">
-                  <Mail className="h-4 w-4 text-brand" /> hello@infield.app
+                <a href="mailto:marketingblueant@gmail.com" className="flex items-center gap-2 hover:text-brand">
+                  <Mail className="h-4 w-4 text-brand" /> marketingblueant@gmail.com
                 </a>
               </li>
               <li>

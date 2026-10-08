@@ -42,8 +42,11 @@ export default function Footer() {
             <span className="inline-flex rounded-xl bg-white p-2 shadow-md">
               <Logo tone="dark" className="h-14 w-auto" />
             </span>
-            <p className="mt-4 text-sm text-white/60">
-              The service center management app for automobile workshops in India.
+            <p className="mt-2 text-xs font-semibold text-white/50 tracking-wider uppercase">
+              Powered by InField7
+            </p>
+            <p className="mt-3 text-sm text-white/60">
+              The service center management app for automobile workshops.
             </p>
             <div className="mt-5 flex gap-3">
               {[Facebook, Instagram, Linkedin].map((Icon, i) => (

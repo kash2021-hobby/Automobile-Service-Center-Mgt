@@ -22,9 +22,14 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-ink/95 backdrop-blur">
       <nav className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-4 py-3 lg:px-8">
-        <a href="#top" className="justify-self-start inline-flex items-center rounded-xl bg-white p-1.5 shadow-sm min-w-0">
-          <Logo className="h-10 sm:h-11 w-auto" />
-        </a>
+        <div className="justify-self-start flex items-center gap-2.5">
+          <a href="#top" className="inline-flex items-center rounded-xl bg-white p-1.5 shadow-sm min-w-0">
+            <Logo className="h-10 sm:h-11 w-auto" />
+          </a>
+          <span className="text-[10px] font-semibold text-white/60 uppercase tracking-wider bg-white/5 border border-white/10 px-2 py-1 rounded-md hidden sm:inline-block">
+            Powered by InField7
+          </span>
+        </div>
 
         <div className="hidden items-center gap-8 lg:flex">
           {LINKS.map((l) => (

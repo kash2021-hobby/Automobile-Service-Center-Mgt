@@ -285,7 +285,7 @@ export default function Features() {
                   <span className="block text-status-blue">Automatically.</span>
                 </h2>
                 <p className="mt-4 text-base text-muted-foreground leading-relaxed">
-                  Infield7 matches vehicle issues with mechanic skill sets and current bay capacity in real time.
+                  MarkPresent matches vehicle issues with mechanic skill sets and current bay capacity in real time.
                 </p>
                 <ul className="mt-6 space-y-3">
                   {[
@@ -669,7 +669,7 @@ export default function Features() {
 
                 <div className="mt-4 rounded-2xl bg-white p-5 shadow-md border border-black/5 space-y-3 text-xs sm:text-sm text-ink">
                   <div className="flex items-center justify-between border-b border-black/5 pb-2 text-xs font-bold text-whatsapp">
-                    <span>Infield7 Workshop Assistant</span>
+                    <span>MarkPresent Workshop Assistant</span>
                     <span>11:42 AM</span>
                   </div>
                   <p className="leading-relaxed">
@@ -758,7 +758,7 @@ export default function Features() {
         <div className="bg-[#2D5BE3] py-8 px-4 text-white text-center shadow-lg">
           <div className="mx-auto max-w-5xl flex flex-col sm:flex-row items-center justify-between gap-4">
             <h3 className="font-display text-[22px] sm:text-[28px] font-bold uppercase tracking-wide text-white">
-              See Infield7 running in your workshop.
+              See MarkPresent running in your workshop.
             </h3>
             <a
               href="#contact"

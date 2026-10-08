@@ -135,7 +135,7 @@ export default function Contact() {
                 <span className="block text-brand">Grow Faster.</span>
               </h2>
               <p className="mt-4 text-base text-white/80 leading-relaxed">
-                See how Infield7 transforms your workshop workflow in a 15-minute live WhatsApp call or demo.
+                See how MarkPresent transforms your workshop workflow in a 15-minute live WhatsApp call or demo.
               </p>
 
               <div className="mt-8 space-y-4">
@@ -176,7 +176,7 @@ export default function Contact() {
                 </div>
                 <h3 className="text-2xl sm:text-3xl font-extrabold text-white">Appointment Request Submitted!</h3>
                 <p className="max-w-md mx-auto text-sm text-white/70 leading-relaxed">
-                  Thank you for booking with Infield7. Your details have been recorded successfully. Our team will review your appointment request and contact you shortly.
+                  Thank you for booking with MarkPresent. Your details have been recorded successfully. Our team will review your appointment request and contact you shortly.
                 </p>
                 <div className="pt-4">
                   <button

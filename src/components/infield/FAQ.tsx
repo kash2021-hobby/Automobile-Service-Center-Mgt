@@ -9,23 +9,23 @@ const FAQS = [
   },
   {
     q: "Is it difficult to set up? How long does it take?",
-    a: "Infield7 is designed for quick onboarding. Most workshops get fully set up with vehicle bays, mechanic profiles, and inventory in under 2 hours with assistance from our team.",
+    a: "MarkPresent is designed for quick onboarding. Most workshops get fully set up with vehicle bays, mechanic profiles, and inventory in under 2 hours with assistance from our team.",
   },
   {
     q: "Does it work with poor internet?",
-    a: "Yes, Infield7 includes offline sync capabilities. Job card entries and stage updates saved offline will automatically sync with the cloud once network connectivity is restored.",
+    a: "Yes, MarkPresent includes offline sync capabilities. Job card entries and stage updates saved offline will automatically sync with the cloud once network connectivity is restored.",
   },
   {
     q: "Is the app available in Hindi?",
-    a: "Yes, the Infield7 mechanic mobile interface supports both Hindi and English so floor technicians can navigate job cards and tasks easily in their preferred language.",
+    a: "Yes, the MarkPresent mechanic mobile interface supports both Hindi and English so floor technicians can navigate job cards and tasks easily in their preferred language.",
   },
   {
     q: "Are the WhatsApp updates to customers automatic?",
     a: "Yes, WhatsApp status updates (Vehicle Received, In Repair, Ready for Delivery) are triggered automatically whenever a mechanic or manager updates the job status on the app.",
   },
   {
-    q: "How much does Infield7 cost?",
-    a: "Infield7 offers flexible monthly & annual subscription plans based on the number of service bays and active mechanics in your workshop. Book a free demo to get custom pricing for your workshop.",
+    q: "How much does MarkPresent cost?",
+    a: "MarkPresent offers flexible monthly & annual subscription plans based on the number of service bays and active mechanics in your workshop. Book a free demo to get custom pricing for your workshop.",
   },
   {
     q: "Is my data safe?",

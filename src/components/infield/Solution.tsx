@@ -44,7 +44,7 @@ export default function Solution() {
         <Reveal className="text-center">
           <Eyebrow>The Solution</Eyebrow>
           <h2 className="mt-3 text-[clamp(1.75rem,5.5vw,3rem)] leading-tight font-bold uppercase">
-            Meet Infield7. Your Entire Service Center
+            Meet MarkPresent. Your Entire Service Center
             <span className="block text-brand">In One App.</span>
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base text-muted-foreground">

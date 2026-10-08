@@ -1,6 +1,6 @@
 import { WHATSAPP_NUMBER } from "./ui";
 
-const WA_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=Hi%20Infield7%20Team%2C%20I%27m%20interested%20in%20Infield7%20for%20my%20service%20center.`;
+const WA_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=Hi%20MarkPresent%20Team%2C%20I%27m%20interested%20in%20MarkPresent%20for%20my%20service%20center.`;
 
 function RealWhatsAppIcon({ className = "h-7 w-7 fill-white" }: { className?: string }) {
   return (

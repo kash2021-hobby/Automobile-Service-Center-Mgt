@@ -51,7 +51,7 @@ export default function WhatIf() {
                 withInField ? "text-white/60 hover:text-white" : "bg-alert text-white shadow"
               }`}
             >
-              Without Infield7
+              Without MarkPresent
             </button>
             <button
               type="button"
@@ -60,7 +60,7 @@ export default function WhatIf() {
                 withInField ? "bg-brand text-white shadow" : "text-white/60 hover:text-white"
               }`}
             >
-              With Infield7
+              With MarkPresent
             </button>
           </div>
         </Reveal>

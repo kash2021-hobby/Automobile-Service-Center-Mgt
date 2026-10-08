@@ -68,7 +68,7 @@ export default function Hero() {
             </Reveal>
             <Reveal delay={0.12}>
               <p className="mt-3 max-w-xl text-sm leading-relaxed text-white/90 sm:text-[18px]">
-                Job cards, vehicle status, mechanics, spare parts, customer updates and salaries, all managed live on Infield7.
+                Job cards, vehicle status, mechanics, spare parts, customer updates and salaries, all managed live on MarkPresent.
               </p>
             </Reveal>
             <Reveal delay={0.18}>

@@ -24,7 +24,7 @@ export default function WhyChoose() {
     <section className="bg-white py-16 lg:py-24">
       <div className="mx-auto max-w-7xl px-4 lg:px-8">
         <SectionTitle>
-          Why Workshops <span className="text-brand">Choose Infield7</span>
+          Why Workshops <span className="text-brand">Choose MarkPresent</span>
         </SectionTitle>
 
         <ul className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-7">
